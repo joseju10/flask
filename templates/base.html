@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="/static/css/estilos.css" >
+    </head>
+    <body>
+    <div id="main_wrapper">
+        <header>
+            <div id="portada">
+                <img src="imagenes/banner.gif" id="banner" alt="banner">
+                <img src="imagenes/logo.png" id="logo" alt="logo">
+            </div>
+            <hr>
+            <nav>
+            <ul>
+                <li><a href="https://dit.gonzalonazareno.org">Plataforma Moodle</a></li>
+                <li><a href="https://google.es">Google</a></li>
+                <li><a href="https://josejuinfo.data.blog">Vlog Servicios</a></li>
+                <li><a href="https://debian.org">Página debian</a></li>
+            </ul>
+            </nav>
+        </header>
+        <div>
+            {% block content %}{% endblock %}
+        </div>
+        <hr>
+        <footer>
+            <p>Página Web hecha por Jose Juan, ©</p>
+        </footer>
+    </div>
+    </body>
+</html>

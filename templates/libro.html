@@ -26,7 +26,8 @@
                 <p>ESTE LIBRO AUN NO SE HA PUBLICADO</p>
             {% else %}
                 <h1>Titulo:</h1><p>{{libro.title}}</p>
-                <h2>Imagen:</h2><img scr="{{libro.thumbnailUrl}}">
+                <h2>Imagen:</h2>
+                <img src="{{libro.thumbnailUrl}}" />
                 <div class="descripcion_libro">
                     <h3>Numero de paginas:</h3><p>{{libro.pageCount}}</p>
                     <h3>Descripcion:</h3><p>{{libro.shortDescription}}</p>

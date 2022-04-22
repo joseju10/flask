@@ -24,7 +24,7 @@
             {% if libros %}
                 <ul>
                     {% for libro in libros -%}
-                        <li><a href="/libro?isbn={{libro.isbn}}">{{ libro.title }}</a></li>
+                        <li><a href="/libro/{{libro.isbn}}">{{ libro.title }}</a></li>
                     {% endfor -%}
                 </ul>
             {% else %}
@@ -32,7 +32,5 @@
             {% endif %}
         </div>
     </section>
-
 </div>
-
 {% endblock %}

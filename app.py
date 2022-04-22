@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, abort
 app = Flask(__name__)
 
 import json
@@ -12,12 +12,14 @@ def inicio():
     libros=datos_json
     return render_template("inicio.html",libros=libros)
 
-@app.route('/libro')
-def libro():
-    isbn=int(request.args.get("isbn"))
+@app.route('/libro/<isbn>')
+def libro(isbn):
+    dato="MEAP"
     for libro in datos_json:
-        if libro["isbn"== isbn]:
-            return render_template("libro.html",libro=libro)
+        if libro["isbn"]==isbn:
+            return render_template("libro.html",libro=libro,dato=dato)
     return abort(404)
+
+
 
 app.run("0.0.0.0",5000,debug=True)

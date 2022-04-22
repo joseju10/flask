@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Biblioteca{% endblock %}
+{% block content %}
+<div id="main_wrapper">
+    <header>
+        <div id="portada">
+            <img src="/static/imagenes/banner.gif" id="banner" alt="banner">
+            <img src="/static/imagenes/logo.png" id="logo" alt="logo">
+        </div>
+        <hr>
+        <nav>
+        <ul>
+            <li><a href="https://dit.gonzalonazareno.org">Plataforma Moodle</a></li>
+            <li><a href="https://google.es">Google</a></li>
+            <li><a href="https://josejuinfo.data.blog">Vlog Servicios</a></li>
+            <li><a href="https://debian.org">Página debian</a></li>
+        </ul>
+        </nav>
+    </header>
+    <h4>José Juan Hervás Carrasco</h4>
+    <section>
+        <h1>Libro:</h1>
+        <div class="libro">
+            <h1>Titulo: {{libro.title}}</h1>
+	        <h2>Imagen: {{libro.thumbnailUrl}}</h2>
+	        <div class="descripcion_libro">
+                <h3>Numero de paginas: {{libro.pageCount}}</h3>
+                <h3>Descripcion: {{libro.shortDescription}}</h3>
+                <h3>Autores: {{libro.authors}}</h3>
+                <h3>Categorias: {{libro.categories}}</h3>
+            </div>
+	        <a href="/">Volver</a>
+        </div>
+    </section>
+
+</div>
+{% endblock %}

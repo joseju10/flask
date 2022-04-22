@@ -32,9 +32,13 @@
                     <h3>Numero de paginas:</h3><p>{{libro.pageCount}}</p>
                     <h3>Descripcion:</h3><p>{{libro.shortDescription}}</p>
                     <h3>Autores:</h3><p>{{libro.authors}}</p>
-                    <h3>Categorias:</h3><p>{{libro.categories}}</p>
+                    <h3>Categorias:</h3>
+                    {% for categoria in libro.categories -%}
+                        <a href="/categoria/{{categoria}}">{{categoria}}</a>
+                    {% endfor -%}
                 </div>
             {% endif %}
+        <hr>
         <a href="/">Volver</a>
         </div>
     </section>

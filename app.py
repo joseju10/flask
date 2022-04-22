@@ -20,6 +20,13 @@ def libro(isbn):
             return render_template("libro.html",libro=libro,dato=dato)
     return abort(404)
 
-
-
+@app.route('/categoria/<categories>')
+def categoria(categories):
+    libros=datos_json
+    for elem in datos_json:
+        for categoria in elem["categories"]:
+            if categoria==categories:
+                return render_template("categoria.html",libros=libros,categoria=categoria)
+    return abort(404)
+    
 app.run("0.0.0.0",5000,debug=True)
